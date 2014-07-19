@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>ASMTeam</title>
-	<!-- Load styles:
-			1. github's icon theme
-			2. our custom css
-	 -->
-	<link rel="stylesheet" href="css/octicons/octicons.css">
-	<link rel="stylesheet" href="css/main.css" type="text/css">
+    <title>ASMTeam</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+    <!-- Load styles: menu style, main, and default theme -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/theme/dark.css" type="text/css">
+
+    <!-- Load scripts: jquery, navigation js, main -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/plugins/responsive-nav.js"></script>
+    <script src="js/main.js"></script>
 </head>
 <body>
 
-	<!-- Navigation -->
-	<div id="navigation">
+    <!-- Navigation -->
+    <div role="navigation" id="navbar" class="nav-collapse">
+        <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="theme.html">Theme</a></li>
+        </ul>
+    </div>
 
-	</div>
+    <!-- Collapsed navigation -->
+    <div role="main" class="main">
+        <a href="#nav" class="nav-toggle">Menu</a>
 
-	<!-- Content will be dynamically loadded using AJAX (jquery's .load()) -->
-	<div id="content">
+        <div id="content">
+            <!-- Content is loaded here through AJAX -->
+        </div>
+    </div>
 
-	</div>
+    <script>
+        var navigation = responsiveNav("navbar", {customToggle: ".nav-toggle"});
+    </script>
 
-	<!-- Load scripts:
-			1. jquery
-			2. our custom js
-	 -->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="js/main.js"></script>
 </body>
 </html>
